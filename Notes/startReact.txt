@@ -1,0 +1,5 @@
+npm install -g create-react-app
+
+run cmd as administrator and cd to your folder :
+
+npx create-react-app my-app

@@ -1,0 +1,68 @@
+<html>
+    <head></head>
+    <body>
+
+
+        <div id="container">sss</div>
+        <script type="text/javascript" src="react.js"></script>
+        <script type="text/javascript" src="react-dom.js"></script>
+
+
+
+        <script>
+                 
+                var container=document.getElementById("container");
+                var HelloWorld=React.createClass({
+                    
+                ComponentWillMount:()=>{
+
+                  debugger;
+                },
+                render:function(){
+                  var x=10;
+                  var myTime=this.props.my_time;
+                  let message=  "Hello in "+myTime+"";
+                  return React.DOM.p(null, message);
+                },
+                ComponentDidMount:()=>{
+
+                  debugger;
+                },
+                ShouldComponentUpdate:(x)=>{
+                  debugger;
+                },
+                ComponentWillUpdate:()=>{
+
+                  debugger;
+                }
+            
+                });
+            
+            
+              // Call React.createFactory instead of directly call HelloWorld({...}) in   React.render
+
+                var HelloWorldFactory=React.createFactory(HelloWorld);
+                ReactDOM.render(HelloWorldFactory({my_time:new Date().toString()}),container);
+       
+        </script>
+        <!--Old Code-->
+        <script>
+    
+        /*
+             var Hello=React.createClass({
+
+                            render:function(){
+                                 return <p>Hello in {this.props.my_time}</p>;
+                            }
+
+             });
+
+             var container=document.getElementById("container");
+
+             React.renderComponent(<Hello my_time={new Date().toString()}/>,document.getElementById("container"));
+        */
+        </script>
+
+
+    </body>
+</html>
